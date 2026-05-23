@@ -48,7 +48,7 @@ jobs:
           pip install -r requirements.txt
           pip install pytest flake8
       - name: Executar testes
-        run: pytest tests/ -v
+        run: PYTHONPATH=. pytest tests/ -v
       - name: Verificar qualidade do código
         run: flake8 . --max-line-length=120 --exclude=venv
 
