@@ -20,11 +20,11 @@ def calcular_media(notas: list) -> float:
 
 
 @app.route('/user')
-def buscar_usuario_vulneravel():
+def buscar_usuario_seguro():
     user_id = request.args.get('id')
     conn = sqlite3.connect('banco.db')
     cursor = conn.cursor()
-    cursor.execute(f"SELECT * FROM users WHERE id={user_id}")
+    cursor.execute("SELECT * FROM users WHERE id=?", (user_id,))
     return str(cursor.fetchone())
 
 
