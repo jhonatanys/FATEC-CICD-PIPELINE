@@ -2,8 +2,8 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import pytest
-from main import saudacao, calcular_media
+import pytest  # noqa: E402
+from main import saudacao, calcular_media  # noqa: E402
 
 
 class TestSaudacao:
