@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print(f'Média: {calcular_media([8.5, 9.0, 7.5])}')
 
 
-import sqlite3
+import sqlite3  # noqa: E402
 
 
 def buscar_usuario_vulneravel(user_id):
